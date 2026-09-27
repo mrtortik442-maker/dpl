@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Официальный сайт Д.П.Л.</title>
+    <style>
+        :root {
+            --bg-color: #1f1f1f;          
+            --surface-color: #2d2d2d;     
+            --header-color: #242424;      
+            --text-primary: #e3e3e3;      
+            --text-secondary: #aaaaaa;    
+            --accent-color: #8ab4f8;      
+            --green: #81c995;
+            --yellow: #fdd663;
+            --red: #f28b82;
+        }
+
+        body {
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 350px;
+            background-image: url('https://icons8.com'), url('https://icons8.com');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.03; 
+            z-index: -1;
+        }
+
+        header {
+            background-color: var(--header-color);
+            padding: 15px 10px;
+            text-align: center;
+            border-bottom: 1px solid #3c4043;
+        }
+
+        .header-title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .header-gif {
+            width: 60px;         
+            height: auto;
+            object-fit: contain;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        header p {
+            margin: 6px 0 0 0;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 16px;
+            padding-bottom: 40px;
+        }
+
+        .card {
+            background-color: rgba(45, 45, 45, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            border-bottom: 1px solid #3c4043;
+            padding-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 14px 10px;
+            text-align: center;
+            border-bottom: 1px solid #3c4043;
+            font-size: 15px;
+        }
+
+        th {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .team-name {
+            text-align: left;
+            font-weight: 400;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 5px;
+            border-bottom: 1px solid #3c4043;
+        }
+        
+        .stat-number {
+            font-weight: 500;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-title-container">
+        <!-- Левая гифка: Твоя Луна в полете -->
+        <img src="luna-flight-right.gif" alt="" class="header-gif">
+        
+        <h1>Д.П.Л™</h1>
+        
+        <!-- Правая гифка: Твоя Селестия со свитком -->
+        <img src="scroll_arrive_left.gif" alt="" class="header-gif">
+    </div>
+    <p>Официальный портал Дворовой Лиги</p>
+</header>
+
+<div class="container">
+
+    <!-- БЛОК 1: ТАБЛИЦА СЕЗОНА -->
+    <div class="card">
+        <h2>Турнирная Таблица Оптимального Сезона</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%">М</th>
+                    <th style="text-align: left;">Клуб</th>
+                    <th style="width: 25%">Игры</th>
+                    <th style="width: 25%">Очки</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="team-name">🟢 ФК «Зеленка»</td>
+                    <td>4</td>
+                    <td style="color: var(--green); font-weight: 500;">12</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="team-name">🍫 ФК «Шоколадка»</td>
+                    <td>4</td>
+                    <td style="color: var(--yellow); font-weight: 500;">3</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="team-name">🔴 ФК «Португал»</td>
+                    <td>2</td>
+                    <td style="color: var(--red); font-weight: 500;">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- БЛОК 2: ТОП БОМБАРДИРОВ -->
+    <div class="card">
+        <h2>⚽ Топ Бомбардиров</h2>
+        <div class="stat-row"><span>Негма (Зеленка)</span><span class="stat-number">23 гола</span></div>
+        <div class="stat-row"><span>Рахим (Зеленка)</span><span class="stat-number">21 гол</span></div>
+        <div class="stat-row"><span>Кунт (Зеленка)</span><span class="stat-number">17 годов</span></div>
+        <div class="stat-row"><span>Абдурафе (Шоколадка)</span><span class="stat-number">6 голов</span></div>
+        <div class="stat-row"><span>Максим Кронштадский (Шоколадка)</span><span class="stat-number">6 голов</span></div>
+        <div class="stat-row"><span>Саад Ведзижев (Шоколадка)</span><span class="stat-number">6 голов</span></div>
+        <div class="stat-row"><span>Лопед (Зеленка)</span><span class="stat-number">4 гола</span></div>
+        <div class="stat-row"><span>Черкасов Ярослав (Португал)</span><span class="stat-number">4 гола</span></div>
+        <div class="stat-row"><span>Саня Тарасенко (Шоколадка)</span><span class="stat-number">3 гола</span></div>
+        <div class="stat-row"><span>Архип (Шоколадка)</span><span class="stat-number">2 гола</span></div>
+        <div class="stat-row"><span>Сеюль (Шоколадка)</span><span class="stat-number">2 гола</span></div>
+        <div class="stat-row"><span>Карим (Португал)</span><span class="stat-number">2 гола</span></div>
+        <div class="stat-row"><span>Муста (Зеленка)</span><span class="stat-number">1 гол</span></div>
+        <div class="stat-row"><span>Елисеев Степан (Португал)</span><span class="stat-number">1 гол</span></div>
+        <div class="stat-row"><span>Богдан (Шоколадка)</span><span class="stat-number">1 гол</span></div>
+    </div>
+
+    <!-- БЛОК 3: ТОП АССИСТЕНТОВ -->
+    <div class="card">
+        <h2>🎯 Топ Ассистентов</h2>
+        <div class="stat-row"><span>Рахим (Зеленка)</span><span class="stat-number">18 пасов</span></div>
+        <div class="stat-row"><span>Кунт (Зеленка)</span><span class="stat-number">15 пасов</span></div>
+        <div class="stat-row"><span>Негма (Зеленка)</span><span class="stat-number">8 пасов</span></div>
+        <div class="stat-row"><span>Абдурафе (Шоколадка)</span><span class="stat-number">6 пасов</span></div>
+        <div class="stat-row"><span>Максим Кронштадский (Шоколадка)</span><span class="stat-number">4 паса</span></div>
+        <div class="stat-row"><span>Саад Ведзижев (Шоколадка)</span><span class="stat-number">3 паса</span></div>
+        <div class="stat-row"><span>Черкасов Ярослав (Португал)</span><span class="stat-number">2 паса</span></div>
+        <div class="stat-row"><span>Елисеев Степан (Португал)</span><span class="stat-number">2 паса</span></div>
+        <div class="stat-row"><span>Дэниель Ведзижев (Шоколадка)</span><span class="stat-number">2 паса</span></div>
+        <div class="stat-row"><span>Сеюль (Шоколадка)</span><span class="stat-number">1 пас</span></div>
+        <div class="stat-row"><span>Байсайн (Шоколадка)</span><span class="stat-number">1 пас</span></div>
+        <div class="stat-row"><span>Улугбек (Зеленка)</span><span class="stat-number">1 пас</span></div>
+        <div class="stat-row"><span>Елисеев Матвей (Португал)</span><span class="stat-number">1 пас</span></div>
+        <div class="stat-row"><span>Чистяков Алексей (Португал)</span><span class="stat-number">1 пас</span></div>
+        <div class="stat-row"><span>Козленков Даниил (Португал)</span><span class="stat-number">1 пас</span></div>
+    </div>
+
+</div>
+
+</body>
+</html>
